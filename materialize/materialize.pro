@@ -9,7 +9,8 @@ INCLUDEPATH += libraries/yaml-cpp/include
 # LIBS += -L"$$_PRO_FILE_PWD_/libraries/" -lpsapi
 
 SOURCES += main.cpp \
-    models/material.cpp
+    models/material.cpp \
+    mainform.cpp
 
 RESOURCES += qml.qrc
 
@@ -39,4 +40,5 @@ DISTFILES += \
     CategoryComponent
 
 HEADERS += \
-    models/material.h
+    models/material.h \
+    mainform.h

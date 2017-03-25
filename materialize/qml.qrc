@@ -4,5 +4,8 @@
         <file>MainForm.ui.qml</file>
         <file>CategoryComponent.qml</file>
         <file>TextureGridComponent.qml</file>
+        <file>SettingsForm.qml</file>
+        <file>SearchDirectoryComponent.qml</file>
+        <file>SelectFolderComponent.qml</file>
     </qresource>
 </RCC>

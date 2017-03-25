@@ -37,7 +37,28 @@ Rectangle {
 
             ToolBar {
                 id: toolBar
+                anchors.leftMargin: 0
                 anchors.fill: parent
+                rightPadding: 24
+                leftPadding: 24
+
+                ToolButton {
+                    id: settingsToolButton
+                    x: 24
+                    y: 0
+                    text: qsTr("Settings")
+                    bottomPadding: 6
+                    topPadding: 6
+                    padding: 12
+                    rightPadding: 24
+                    leftPadding: 24
+                    anchors.top: parent.top
+                    anchors.topMargin: 0
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: 0
+                    anchors.left: parent.left
+                    anchors.leftMargin: 0
+                }
             }
         }
 
@@ -55,7 +76,8 @@ Rectangle {
             Layout.columnSpan: 1
             Layout.rowSpan: 2
 
-            CategoryComponent { }
+            CategoryComponent {
+            }
         }
 
         Rectangle {
@@ -109,7 +131,8 @@ Rectangle {
             Layout.row: 2
             Layout.column: 1
 
-            TextureGridComponent { }
+            TextureGridComponent {
+            }
         }
 
         Rectangle {
@@ -126,6 +149,15 @@ Rectangle {
             Layout.fillWidth: true
             Layout.minimumWidth: 250
             Layout.maximumWidth: 250
+        }
+    }
+
+    Connections {
+        target: settingsToolButton
+        onClicked: {
+            var component = Qt.createComponent("SettingsForm.qml");
+            var win = component.createObject(root);
+            win.show();
         }
     }
 }
