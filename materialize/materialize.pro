@@ -4,7 +4,7 @@ QT += qml quick
 CONFIG += c++11
 
 INCLUDEPATH += libraries/yaml-cpp/include
-LIBS += -L"libraries/yaml-cpp/src" -lYamlCpp
+# LIBS += -L"libraries/yaml-cpp/src" -lYamlCpp
 
 # LIBS += -L"$$_PRO_FILE_PWD_/libraries/" -lpsapi
 
