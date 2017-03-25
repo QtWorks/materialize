@@ -8,7 +8,8 @@ INCLUDEPATH += libraries/yaml-cpp/include
 
 # LIBS += -L"$$_PRO_FILE_PWD_/libraries/" -lpsapi
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    models/material.cpp
 
 RESOURCES += qml.qrc
 
@@ -36,3 +37,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     CategoryComponent
+
+HEADERS += \
+    models/material.h
